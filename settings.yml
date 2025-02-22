@@ -1,0 +1,28 @@
+# SSH配置
+ssh:
+  port: 2222
+  allowed_password: "honeypot@secret2024!"  # 特殊通行密码
+  allowed_users: ["admin", "root"]          # 允许认证的用户名列表
+  enable_special_password: true             # 是否启用特殊密码
+  host_key: "host_key"     
+  keep_alive: 300          # 连接保持时间（秒）
+
+# HTTP管理界面
+http:
+  enable: true
+  port: 8080
+  username: "honeypot_admin"
+  password: "p@ssw0rd!Secure"
+  log_lines: 200           # 显示最新日志行数
+
+# 日志配置
+logging:
+  file: "logs/ssh_honeypot.log"
+  max_size: 10485760       # 10MB
+  backup_count: 3
+
+# Rich日志格式
+rich:
+  show_time: true
+  show_path: false
+  traceback_show_locals: true

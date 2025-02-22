@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  honeypot:
+    build: .
+    ports:
+      - "2222:2222"
+      - "8080:8080"
+    volumes:
+      - ./logs:/app/logs
+      - ./settings.yml:/app/settings.yml
+      - ./host_key:/app/host_key
+    environment:
+      - SSH_PORT=2222
+      - HTTP_PORT=8080
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
