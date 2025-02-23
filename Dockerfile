@@ -28,3 +28,5 @@ ENV TERM=xterm-256color \
 EXPOSE ${SSH_PORT:-2222} ${HTTP_PORT:-8080}
 
 CMD ["python", "ssh_honeypot.py"]
+
+LABEL org.opencontainers.image.source=https://github.com/naaaaaaaaa1212/ssh-honeypot

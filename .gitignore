@@ -172,3 +172,4 @@ cython_debug/
 
 #Project gitignore
 host_key
+Dockerfile
