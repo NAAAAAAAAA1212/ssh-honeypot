@@ -13,6 +13,8 @@ from rich.logging import RichHandler
 from rich.traceback import install as install_rich_traceback
 from logging.handlers import RotatingFileHandler
 
+VERSION = "v1.0.1"
+
 # 初始化Rich跟踪回溯
 install_rich_traceback(show_locals=True)
 
@@ -234,6 +236,7 @@ def main():
         sock.listen(100)
 
         logger.info(f"SSH蜜罐启动成功，监听端口 {config['ssh']['port']}")
+        logger.info(f"SSH蜜罐启动成功，版本号： {VERSION} 由github NAAAAAAAAA1212编写")
         logger.info(f"特殊通行密码: {config['ssh']['allowed_password']}")
 
         while True:

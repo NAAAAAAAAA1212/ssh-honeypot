@@ -1,5 +1,5 @@
 # ssh-honeypot
-一個ssh的蜜罐
+一个用python编写的ssh蜜罐，带有http后台
 
 # Python 運行
 ```console
